@@ -17,10 +17,10 @@ const Projects = () => {
   return (
     <>
       <Helmet>
-        <title>{translations[language].projectsTitle} | IT Solutions</title>
+        <title>{translations[language].projectsTitle} | NS CodeNest</title>
         <meta
           name="description"
-          content="Explore some of the successful projects completed by IT Solutions."
+          content="Explore some of the successful projects completed by NS CodeNest."
         />
         <meta
           name="keywords"

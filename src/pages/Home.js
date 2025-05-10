@@ -1,14 +1,13 @@
-// src/Home.js
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet";
 import { styles } from "../styles";
 import { ThemeProvider, useTheme } from "../context/ThemeContext";
 import { LanguageProvider, useLanguage } from "../context/LanguageContext";
 import LeftSidebar from "../components/LeftSidebar";
+import useIsMobile from "../hooks/useIsMobile";
 import About from "../components/About";
 import Technologies from "../components/Technologies";
 import Projects from "../components/Projects";
-import useIsMobile from "../hooks/useIsMobile";
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -39,7 +38,6 @@ const Home = () => {
 
           if (mostVisibleSection) {
             console.log(mostVisibleSection);
-            
             setActiveSection(mostVisibleSection);
           }
         },
@@ -76,30 +74,35 @@ const Home = () => {
     }
   };
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: language === "en" ? "IT Solutions Portfolio" : "Portfolio IT Rešenja",
-    url: "https://www.it-solutions.com",
-    author: [
-      {
-        "@type": "Person",
-        name: "Stefan Jelkić",
-        url: "https://www.linkedin.com/in/stefan-jelkic/",
-        sameAs: ["https://github.com/stefanjelkic00", "https://www.linkedin.com/in/stefan-jelkic/"],
-      },
-      {
-        "@type": "Person",
-        name: "Nikola Matosić",
-        url: "https://github.com/NikolaMatosic00",
-        sameAs: ["https://github.com/NikolaMatosic00"],
-      },
-    ],
-    description:
-      language === "en"
-        ? "Portfolio website of Stefan Jelkić and Nikola Matosić — Full-Stack Developers providing IT Solutions."
-        : "Portfolio sajt Stefana Jelkića i Nikole Matosića — Full-Stack programeri koji pružaju IT rešenja.",
-  };
+  // Structured data za SEO
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: language === "en" ? "NS Code Nest Portfolio" : "Portfolio NS Code Nest",
+      url: "https://ns-code-nest.vercel.app",
+      description:
+        language === "en"
+          ? "Portfolio of Stefan Jelkic and Nikola Matosic, showcasing full-stack web solutions at NS Code Nest."
+          : "Portfolio Stefana Jelkića i Nikole Matosića, prikazuje full-stack web rešenja NS Code Nest-a.",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Stefan Jelkić",
+      jobTitle: "Web Developer",
+      url: "https://ns-code-nest.vercel.app",
+      sameAs: ["https://www.linkedin.com/in/stefan-jelkic/", "https://github.com/stefanjelkic00"],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Nikola Matosić",
+      jobTitle: "Web Developer",
+      url: "https://ns-code-nest.vercel.app",
+      sameAs: ["https://github.com/NikolaMatosic00"],
+    },
+  ];
 
   return (
     <>
@@ -107,43 +110,60 @@ const Home = () => {
         <html lang={language === "en" ? "en" : "sr"} />
         <title>
           {language === "en"
-            ? "IT Solutions | Full-Stack Web Development"
-            : "IT Rešenja | Veb Programiranje"}
+            ? "NS Code Nest | Stefan & Nikola Portfolio"
+            : "NS Code Nest | Portfolio Stefana i Nikole"}
         </title>
         <meta
           name="description"
           content={
             language === "en"
-              ? "Portfolio website of Stefan Jelkić and Nikola Matosić — Full-Stack Developers providing IT Solutions."
-              : "Portfolio sajt Stefana Jelkića i Nikole Matosića — Full-Stack programeri koji pružaju IT rešenja."
+              ? "Portfolio of Stefan Jelkic and Nikola Matosic, showcasing full-stack web solutions, projects, and expertise in React, Spring Boot, .NET, and more at NS Code Nest."
+              : "Portfolio Stefana Jelkića i Nikole Matosića, prikazuje full-stack web rešenja, projekte i stručnost u React-u, Spring Boot-u, .NET-u i više na NS Code Nest-u."
           }
         />
-        <meta property="og:title" content="IT Solutions" />
+        <meta
+          name="keywords"
+          content="NS Code Nest, web development, React, Spring Boot, .NET, JavaScript, portfolio, Stefan Jelkic, Nikola Matosic, Novi Sad"
+        />
+        <meta name="author" content="Stefan Jelkic, Nikola Matosic" />
+        <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+        <meta property="og:title" content={language === "en" ? "NS Code Nest | Stefan & Nikola Portfolio" : "NS Code Nest | Portfolio Stefana i Nikole"} />
         <meta
           property="og:description"
           content={
             language === "en"
-              ? "Modern IT solutions for your business — by Stefan Jelkić and Nikola Matosić."
-              : "Moderna IT rešenja za vaše poslovanje — Stefan Jelkić i Nikola Matosić."
+              ? "Explore the portfolio of Stefan Jelkic and Nikola Matosic, featuring full-stack web development projects at NS Code Nest."
+              : "Istražite portfolio Stefana Jelkića i Nikole Matosića, koji prikazuje full-stack web razvojne projekte na NS Code Nest-u."
           }
         />
-        <meta name="twitter:title" content="IT Solutions" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ns-code-nest.vercel.app" />
+        <meta property="og:image" content="https://ns-code-nest.vercel.app/images/nscodenest-logo.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={language === "en" ? "NS Code Nest | Stefan & Nikola Portfolio" : "NS Code Nest | Portfolio Stefana i Nikole"}
+        />
         <meta
           name="twitter:description"
           content={
             language === "en"
-              ? "Modern IT solutions for your business — by Stefan Jelkić and Nikola Matosić."
-              : "Moderna IT rešenja za vaše poslovanje — Stefan Jelkić i Nikola Matosić."
+              ? "Portfolio of Stefan Jelkic and Nikola Matosic, showcasing full-stack web solutions at NS Code Nest."
+              : "Portfolio Stefana Jelkića i Nikole Matosića, prikazuje full-stack web rešenja na NS Code Nest-u."
           }
         />
+        <meta name="twitter:image" content="https://ns-code-nest.vercel.app/images/nscodenest-logo.webp" />
+        <link rel="canonical" href="https://ns-code-nest.vercel.app" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       <div style={styles.container(theme, isMobile)}>
         <LeftSidebar scrollToSection={scrollToSection} activeSection={activeSection} />
         <div style={styles.rightSide(isMobile)}>
-          <About />
-          <Technologies />
-          <Projects />
+          <Suspense fallback={<div>Loading...</div>}>
+            <About />
+            <Technologies />
+            <Projects />
+          </Suspense>
         </div>
       </div>
     </>

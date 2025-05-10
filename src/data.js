@@ -1,7 +1,6 @@
-// src/data.js
 export const translations = {
   en: {
-    // Postojeći ključevi (zadržani)
+    // Postojeći ključevi (zadržani, menjamo samo potrebne)
     name1: "Stefan Jelkić",
     name2: "Nikola Matosić",
     subtitle: "We build full-stack web solutions.",
@@ -15,19 +14,19 @@ export const translations = {
     about: "About Us",
     aboutTitle: "About",
     aboutTeamDesc:
-      "We are IT Solutions, a passionate and dynamic team from Novi Sad, Serbia, united by our love for technology and innovation. As a tight-knit duo, we blend creativity, technical expertise, and a client-first mindset to deliver cutting-edge web solutions. Our collaborative approach, fueled by open communication and a shared vision, allows us to tackle challenges with agility and precision, ensuring every project reflects our commitment to quality and excellence. Beyond coding, we thrive on exploring new tech trends, brainstorming innovative ideas, and drawing inspiration from our travels and adventures in nature.",
+      "We are NS Code Nest, a passionate and dynamic team from Novi Sad, Serbia, united by our love for technology and innovation. As a tight-knit duo, we blend creativity, technical expertise, and a client-first mindset to deliver cutting-edge web solutions. Our collaborative approach, fueled by open communication and a shared vision, allows us to tackle challenges with agility and precision, ensuring every project reflects our commitment to quality and excellence. Beyond coding, we thrive on exploring new tech trends, brainstorming innovative ideas, and drawing inspiration from our travels and adventures in nature.",
     aboutStefan: "About Stefan",
     aboutStefanDesc:
-      "Stefan Jelkić is a skilled developer with expertise in React, Spring Boot, and full-stack web development. As a co-founder of IT Solutions, he drives innovation and technical excellence, ensuring robust and scalable solutions.",
+      "Stefan Jelkić is a skilled developer with expertise in React, Spring Boot, and full-stack web development. As a co-founder of NS Code Nest, he drives innovation and technical excellence, ensuring robust and scalable solutions.",
     aboutNikola: "About Nikola",
     aboutNikolaDesc:
-      "Nikola Matosić specializes in UI/UX design and frontend development, bringing creativity and user-centric solutions to IT Solutions' projects. His eye for detail and passion for intuitive interfaces elevate every project.",
+      "Nikola Matosić specializes in UI/UX design, frontend development, Spring Boot, .NET, and React, bringing creativity and user-centric solutions to NS Code Nest's projects. His eye for detail and passion for intuitive interfaces, combined with backend expertise, elevate every project.",
     aboutText1:
-      "We are Stefan Jelkić and Nikola Matosić, founders of IT Solutions, a brand we aim to grow into a leading software development company. Based in Novi Sad, Serbia, we specialize in creating full-stack web applications and websites tailored to businesses of all sizes, driven by our passion for technology and innovation.",
+      "We are Stefan Jelkić and Nikola Matosić, founders of NS Code Nest, a brand we aim to grow into a leading software development company. Based in Novi Sad, Serbia, we specialize in creating full-stack web applications and websites tailored to businesses of all sizes, driven by our passion for technology and innovation.",
     aboutText2:
       "Graduates of the Faculty of Technical Sciences in Novi Sad, we hold degrees in Software and Information Technologies and are pursuing master’s degrees in Engineering Management. Our expertise in programming, system design, and project management allows us to deliver scalable, efficient solutions while meeting client expectations through clear communication and competitive pricing.",
     aboutText3:
-      "Our goal is to expand IT Solutions and establish a reputation for quality and creativity. We adapt to diverse industries, ensuring client satisfaction with every project. Outside work, we explore new technologies, work on personal projects, and enjoy nature and travel, which fuels our inspiration and growth.",
+      "Our goal is to expand NS Code Nest and establish a reputation for quality and creativity. We adapt to diverse industries, ensuring client satisfaction with every project. Outside work, we explore new technologies, work on personal projects, and enjoy nature and travel, which fuels our inspiration and growth.",
 
     // Ključevi za Technologies.js
     technologies: "Technologies",
@@ -104,7 +103,7 @@ export const translations = {
       "An error occurred while rendering this section. Please try again later.",
   },
   sr: {
-    // Postojeći ključevi (zadržani)
+    // Postojeći ključevi (zadržani, menjamo samo potrebne)
     name1: "Stefan Jelkić",
     name2: "Nikola Matosić",
     subtitle: "Gradimo kompletna web rešenja.",
@@ -114,23 +113,23 @@ export const translations = {
     contactNikola: "Nikola - +381646477555",
     languageButton: "English",
 
-    // Ključevi za About.js
+    // Ključevi za About.js (promenjeno IT Solutions u NS Code Nest)
     about: "O nama",
     aboutTitle: "O nama",
     aboutTeamDesc:
-      "Mi smo IT Solutions, strastveni i dinamični tim iz Novog Sada, Srbija, ujedinjen ljubavlju prema tehnologiji i inovacijama. Kao usklađeni duo, spajamo kreativnost, tehničku stručnost i fokus na klijente kako bismo isporučili vrhunska web rešenja. Naš kolaborativni pristup, podstaknut otvorenom komunikacijom i zajedničkom vizijom, omogućava nam da se suočimo sa izazovima brzo i precizno, osiguravajući da svaki projekat odražava našu posvećenost kvalitetu i izvrsnosti. Kada ne kodiramo, istražujemo nove tehnološke trendove, smišljamo inovativne ideje ili crpimo inspiraciju iz putovanja i prirode.",
+      "Mi smo NS Code Nest, strastveni i dinamični tim iz Novog Sada, Srbija, ujedinjen ljubavlju prema tehnologiji i inovacijama. Kao usklađeni duo, spajamo kreativnost, tehničku stručnost i fokus na klijente kako bismo isporučili vrhunska web rešenja. Naš kolaborativni pristup, podstaknut otvorenom komunikacijom i zajedničkom vizijom, omogućava nam da se suočimo sa izazovima brzo i precizno, osiguravajući da svaki projekat odražava našu posvećenost kvalitetu i izvrsnosti. Kada ne kodiramo, istražujemo nove tehnološke trendove, smišljamo inovativne ideje ili crpimo inspiraciju iz putovanja i prirode.",
     aboutStefan: "O Stefanu",
     aboutStefanDesc:
-      "Stefan Jelkić je vešt programer sa stručnošću u React-u, Spring Boot-u i full-stack web razvoju. Kao suosnivač IT Solutions, on podstiče inovacije i tehničku izvrsnost, osiguravajući robusna i skalabilna rešenja.",
+      "Stefan Jelkić je vešt programer sa stručnošću u React-u, Spring Boot-u i full-stack web razvoju. Kao suosnivač NS Code Nest, on podstiče inovacije i tehničku izvrsnost, osiguravajući robusna i skalabilna rešenja.",
     aboutNikola: "O Nikoli",
     aboutNikolaDesc:
-      "Nikola Matosić specijalizovan je za UI/UX dizajn i frontend razvoj, donoseći kreativnost i korisnički orijentisana rešenja projektima IT Solutions. Njegovo oko za detalje i strast za intuitivnim interfejsima podižu svaki projekat na viši nivo.",
+      "Nikola Matosić specijalizovan je za UI/UX dizajn, frontend razvoj, Spring Boot, .NET i React, donoseći kreativnost i korisnički orijentisana rešenja projektima NS Code Nest. Njegovo oko za detalje, strast za intuitivnim interfejsima i ekspertiza u backend razvoju podižu svaki projekat na viši nivo.",
     aboutText1:
-      "Mi smo Stefan Jelkić i Nikola Matosić, osnivači IT Solutions, brenda koji želimo da razvijemo u vodeću kompaniju za razvoj softvera. Sa sedištem u Novom Sadu, Srbija, specijalizovani smo za kreiranje kompletnih web aplikacija i web sajtova prilagođenih preduzećima svih veličina, vođeni našom strašću prema tehnologiji i inovacijama.",
+      "Mi smo Stefan Jelkić i Nikola Matosić, osnivači NS Code Nest, brenda koji želimo da razvijemo u vodeću kompaniju za razvoj softvera. Sa sedištem u Novom Sadu, Srbija, specijalizovani smo za kreiranje kompletnih web aplikacija i web sajtova prilagođenih preduzećima svih veličina, vođeni našom strašću prema tehnologiji i inovacijama.",
     aboutText2:
       "Diplomci Fakulteta tehničkih nauka u Novom Sadu, posedujemo diplome iz softverskih i informacionih tehnologija i trenutno pohađamo master studije iz inženjerskog menadžmenta. Naša stručnost u programiranju, sistemskom dizajnu i upravljanju projektima omogućava nam da isporučimo skalabilna, efikasna rešenja uz ispunjavanje očekivanja klijenata kroz jasnu komunikaciju i konkurentne cene.",
     aboutText3:
-      "Naš cilj je da proširimo IT Solutions i izgradimo reputaciju za kvalitet i kreativnost. Prilagođavamo se različitim industrijama, obezbeđujući zadovoljstvo klijenata sa svakim projektom. Izvan posla, istražujemo nove tehnologije, radimo na ličnim projektima i uživamo u prirodi i putovanjima, što podstiče našu inspiraciju i rast.",
+      "Naš cilj je da proširimo NS Code Nest i izgradimo reputaciju za kvalitet i kreativnost. Prilagođavamo se različitim industrijama, obezbeđujući zadovoljstvo klijenata sa svakim projektom. Izvan posla, istražujemo nove tehnologije, radimo na ličnim projektima i uživamo u prirodi i putovanjima, što podstiče našu inspiraciju i rast.",
 
     // Ključevi za Technologies.js
     technologies: "Tehnologije",
@@ -208,6 +207,7 @@ export const translations = {
   },
 };
 
+// Ostali delovi data.js (techStack, teamProjects, stefanProjects, nikolaProjects, navItems) ostaju nepromenjeni
 export const techStack = [
   "Java",
   "Spring Boot",

@@ -78,8 +78,8 @@ const LeftSidebar = ({ scrollToSection, activeSection }) => {
 
         <div style={styles.logoSpotlightContainer}>
           <img
-            src={process.env.PUBLIC_URL + "/ITSolutionsLogo.png"}
-            alt="IT Solutions Logo"
+            src={process.env.PUBLIC_URL + "/NSCodeNestlogo.png"}
+            alt="NS CodeNest Logo"
             style={styles.logo(theme, isMobile)}
           />
           <div style={styles.logoSpotlight(theme)} />
